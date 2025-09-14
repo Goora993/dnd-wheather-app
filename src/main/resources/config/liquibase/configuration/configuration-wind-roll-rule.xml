@@ -1,0 +1,216 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+    <changeSet author="dawid.gorkiewicz" id="wind_roll_rule">
+        <!-- NONE row -->
+        <insert tableName="wind_roll_rule">
+            <column name="id" value="1"/>
+            <column name="creation_date" value="2025-09-14 21:09:00"/>
+            <column name="modification_date" value="2025-09-14 21:09:00"/>
+            <column name="version" value="0"/>
+            <column name="current_wind" value="NONE"/>
+            <column name="result_wind" value="NONE"/>
+            <column name="roll_from" value="1"/>
+            <column name="roll_to" value="64"/>
+        </insert>
+        <insert tableName="wind_roll_rule">
+            <column name="id" value="2"/>
+            <column name="creation_date" value="2025-09-14 21:09:00"/>
+            <column name="modification_date" value="2025-09-14 21:09:00"/>
+            <column name="version" value="0"/>
+            <column name="current_wind" value="NONE"/>
+            <column name="result_wind" value="LIGHT"/>
+            <column name="roll_from" value="65"/>
+            <column name="roll_to" value="94"/>
+        </insert>
+        <insert tableName="wind_roll_rule">
+            <column name="id" value="3"/>
+            <column name="creation_date" value="2025-09-14 21:09:00"/>
+            <column name="modification_date" value="2025-09-14 21:09:00"/>
+            <column name="version" value="0"/>
+            <column name="current_wind" value="NONE"/>
+            <column name="result_wind" value="STRONG"/>
+            <column name="roll_from" value="95"/>
+            <column name="roll_to" value="100"/>
+        </insert>
+
+        <!-- LIGHT row -->
+        <insert tableName="wind_roll_rule">
+            <column name="id" value="4"/>
+            <column name="creation_date" value="2025-09-14 21:09:00"/>
+            <column name="modification_date" value="2025-09-14 21:09:00"/>
+            <column name="version" value="0"/>
+            <column name="current_wind" value="LIGHT"/>
+            <column name="result_wind" value="NONE"/>
+            <column name="roll_from" value="1"/>
+            <column name="roll_to" value="19"/>
+        </insert>
+        <insert tableName="wind_roll_rule">
+            <column name="id" value="5"/>
+            <column name="creation_date" value="2025-09-14 21:09:00"/>
+            <column name="modification_date" value="2025-09-14 21:09:00"/>
+            <column name="version" value="0"/>
+            <column name="current_wind" value="LIGHT"/>
+            <column name="result_wind" value="LIGHT"/>
+            <column name="roll_from" value="20"/>
+            <column name="roll_to" value="69"/>
+        </insert>
+        <insert tableName="wind_roll_rule">
+            <column name="id" value="6"/>
+            <column name="creation_date" value="2025-09-14 21:09:00"/>
+            <column name="modification_date" value="2025-09-14 21:09:00"/>
+            <column name="version" value="0"/>
+            <column name="current_wind" value="LIGHT"/>
+            <column name="result_wind" value="STRONG"/>
+            <column name="roll_from" value="70"/>
+            <column name="roll_to" value="94"/>
+        </insert>
+        <insert tableName="wind_roll_rule">
+            <column name="id" value="7"/>
+            <column name="creation_date" value="2025-09-14 21:09:00"/>
+            <column name="modification_date" value="2025-09-14 21:09:00"/>
+            <column name="version" value="0"/>
+            <column name="current_wind" value="LIGHT"/>
+            <column name="result_wind" value="GALE"/>
+            <column name="roll_from" value="95"/>
+            <column name="roll_to" value="99"/>
+        </insert>
+        <insert tableName="wind_roll_rule">
+            <column name="id" value="8"/>
+            <column name="creation_date" value="2025-09-14 21:09:00"/>
+            <column name="modification_date" value="2025-09-14 21:09:00"/>
+            <column name="version" value="0"/>
+            <column name="current_wind" value="LIGHT"/>
+            <column name="result_wind" value="HURRICANE"/>
+            <column name="roll_from" value="100"/>
+            <column name="roll_to" value="100"/>
+        </insert>
+
+        <!-- STRONG row -->
+        <insert tableName="wind_roll_rule">
+            <column name="id" value="9"/>
+            <column name="creation_date" value="2025-09-14 21:09:00"/>
+            <column name="modification_date" value="2025-09-14 21:09:00"/>
+            <column name="version" value="0"/>
+            <column name="current_wind" value="STRONG"/>
+            <column name="result_wind" value="NONE"/>
+            <column name="roll_from" value="1"/>
+            <column name="roll_to" value="4"/>
+        </insert>
+        <insert tableName="wind_roll_rule">
+            <column name="id" value="10"/>
+            <column name="creation_date" value="2025-09-14 21:09:00"/>
+            <column name="modification_date" value="2025-09-14 21:09:00"/>
+            <column name="version" value="0"/>
+            <column name="current_wind" value="STRONG"/>
+            <column name="result_wind" value="LIGHT"/>
+            <column name="roll_from" value="5"/>
+            <column name="roll_to" value="24"/>
+        </insert>
+        <insert tableName="wind_roll_rule">
+            <column name="id" value="11"/>
+            <column name="creation_date" value="2025-09-14 21:09:00"/>
+            <column name="modification_date" value="2025-09-14 21:09:00"/>
+            <column name="version" value="0"/>
+            <column name="current_wind" value="STRONG"/>
+            <column name="result_wind" value="STRONG"/>
+            <column name="roll_from" value="25"/>
+            <column name="roll_to" value="74"/>
+        </insert>
+        <insert tableName="wind_roll_rule">
+            <column name="id" value="12"/>
+            <column name="creation_date" value="2025-09-14 21:09:00"/>
+            <column name="modification_date" value="2025-09-14 21:09:00"/>
+            <column name="version" value="0"/>
+            <column name="current_wind" value="STRONG"/>
+            <column name="result_wind" value="GALE"/>
+            <column name="roll_from" value="75"/>
+            <column name="roll_to" value="94"/>
+        </insert>
+        <insert tableName="wind_roll_rule">
+            <column name="id" value="13"/>
+            <column name="creation_date" value="2025-09-14 21:09:00"/>
+            <column name="modification_date" value="2025-09-14 21:09:00"/>
+            <column name="version" value="0"/>
+            <column name="current_wind" value="STRONG"/>
+            <column name="result_wind" value="HURRICANE"/>
+            <column name="roll_from" value="95"/>
+            <column name="roll_to" value="100"/>
+        </insert>
+
+        <!-- GALE row -->
+        <insert tableName="wind_roll_rule">
+            <column name="id" value="14"/>
+            <column name="creation_date" value="2025-09-14 21:09:00"/>
+            <column name="modification_date" value="2025-09-14 21:09:00"/>
+            <column name="version" value="0"/>
+            <column name="current_wind" value="GALE"/>
+            <column name="result_wind" value="LIGHT"/>
+            <column name="roll_from" value="1"/>
+            <column name="roll_to" value="4"/>
+        </insert>
+        <insert tableName="wind_roll_rule">
+            <column name="id" value="15"/>
+            <column name="creation_date" value="2025-09-14 21:09:00"/>
+            <column name="modification_date" value="2025-09-14 21:09:00"/>
+            <column name="version" value="0"/>
+            <column name="current_wind" value="GALE"/>
+            <column name="result_wind" value="STRONG"/>
+            <column name="roll_from" value="5"/>
+            <column name="roll_to" value="34"/>
+        </insert>
+        <insert tableName="wind_roll_rule">
+            <column name="id" value="16"/>
+            <column name="creation_date" value="2025-09-14 21:09:00"/>
+            <column name="modification_date" value="2025-09-14 21:09:00"/>
+            <column name="version" value="0"/>
+            <column name="current_wind" value="GALE"/>
+            <column name="result_wind" value="GALE"/>
+            <column name="roll_from" value="35"/>
+            <column name="roll_to" value="84"/>
+        </insert>
+        <insert tableName="wind_roll_rule">
+            <column name="id" value="17"/>
+            <column name="creation_date" value="2025-09-14 21:09:00"/>
+            <column name="modification_date" value="2025-09-14 21:09:00"/>
+            <column name="version" value="0"/>
+            <column name="current_wind" value="GALE"/>
+            <column name="result_wind" value="HURRICANE"/>
+            <column name="roll_from" value="85"/>
+            <column name="roll_to" value="100"/>
+        </insert>
+
+        <!-- HURRICANE row -->
+        <insert tableName="wind_roll_rule">
+            <column name="id" value="18"/>
+            <column name="creation_date" value="2025-09-14 21:09:00"/>
+            <column name="modification_date" value="2025-09-14 21:09:00"/>
+            <column name="version" value="0"/>
+            <column name="current_wind" value="HURRICANE"/>
+            <column name="result_wind" value="STRONG"/>
+            <column name="roll_from" value="1"/>
+            <column name="roll_to" value="9"/>
+        </insert>
+        <insert tableName="wind_roll_rule">
+            <column name="id" value="19"/>
+            <column name="creation_date" value="2025-09-14 21:09:00"/>
+            <column name="modification_date" value="2025-09-14 21:09:00"/>
+            <column name="version" value="0"/>
+            <column name="current_wind" value="HURRICANE"/>
+            <column name="result_wind" value="GALE"/>
+            <column name="roll_from" value="10"/>
+            <column name="roll_to" value="44"/>
+        </insert>
+        <insert tableName="wind_roll_rule">
+            <column name="id" value="20"/>
+            <column name="creation_date" value="2025-09-14 21:09:00"/>
+            <column name="modification_date" value="2025-09-14 21:09:00"/>
+            <column name="version" value="0"/>
+            <column name="current_wind" value="HURRICANE"/>
+            <column name="result_wind" value="HURRICANE"/>
+            <column name="roll_from" value="45"/>
+            <column name="roll_to" value="100"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,662 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+    <changeSet author="dawid.gorkiewicz" id="wind_direction_roll_rule">
+        <!-- NORTH row -->
+        <insert tableName="wind_direction_roll_rule">
+            <column name="id" value="1"/>
+            <column name="creation_date" value="2025-09-14 21:09:00"/>
+            <column name="modification_date" value="2025-09-14 21:09:00"/>
+            <column name="version" value="0"/>
+            <column name="current_wind_direction" value="NORTH"/>
+            <column name="result_wind_direction" value="NORTH"/>
+            <column name="roll_from" value="1"/>
+            <column name="roll_to" value="10"/>
+        </insert>
+        <insert tableName="wind_direction_roll_rule">
+            <column name="id" value="2"/>
+            <column name="creation_date" value="2025-09-14 21:09:00"/>
+            <column name="modification_date" value="2025-09-14 21:09:00"/>
+            <column name="version" value="0"/>
+            <column name="current_wind_direction" value="NORTH"/>
+            <column name="result_wind_direction" value="NORTH_EAST"/>
+            <column name="roll_from" value="11"/>
+            <column name="roll_to" value="35"/>
+        </insert>
+        <insert tableName="wind_direction_roll_rule">
+            <column name="id" value="3"/>
+            <column name="creation_date" value="2025-09-14 21:09:00"/>
+            <column name="modification_date" value="2025-09-14 21:09:00"/>
+            <column name="version" value="0"/>
+            <column name="current_wind_direction" value="NORTH"/>
+            <column name="result_wind_direction" value="NORTH_WEST"/>
+            <column name="roll_from" value="36"/>
+            <column name="roll_to" value="60"/>
+        </insert>
+        <insert tableName="wind_direction_roll_rule">
+            <column name="id" value="4"/>
+            <column name="creation_date" value="2025-09-14 21:09:00"/>
+            <column name="modification_date" value="2025-09-14 21:09:00"/>
+            <column name="version" value="0"/>
+            <column name="current_wind_direction" value="NORTH"/>
+            <column name="result_wind_direction" value="EAST"/>
+            <column name="roll_from" value="61"/>
+            <column name="roll_to" value="75"/>
+        </insert>
+        <insert tableName="wind_direction_roll_rule">
+            <column name="id" value="5"/>
+            <column name="creation_date" value="2025-09-14 21:09:00"/>
+            <column name="modification_date" value="2025-09-14 21:09:00"/>
+            <column name="version" value="0"/>
+            <column name="current_wind_direction" value="NORTH"/>
+            <column name="result_wind_direction" value="WEST"/>
+            <column name="roll_from" value="76"/>
+            <column name="roll_to" value="85"/>
+        </insert>
+        <insert tableName="wind_direction_roll_rule">
+            <column name="id" value="6"/>
+            <column name="creation_date" value="2025-09-14 21:09:00"/>
+            <column name="modification_date" value="2025-09-14 21:09:00"/>
+            <column name="version" value="0"/>
+            <column name="current_wind_direction" value="NORTH"/>
+            <column name="result_wind_direction" value="SOUTH_EAST"/>
+            <column name="roll_from" value="86"/>
+            <column name="roll_to" value="90"/>
+        </insert>
+        <insert tableName="wind_direction_roll_rule">
+            <column name="id" value="7"/>
+            <column name="creation_date" value="2025-09-14 21:09:00"/>
+            <column name="modification_date" value="2025-09-14 21:09:00"/>
+            <column name="version" value="0"/>
+            <column name="current_wind_direction" value="NORTH"/>
+            <column name="result_wind_direction" value="SOUTH_WEST"/>
+            <column name="roll_from" value="91"/>
+            <column name="roll_to" value="95"/>
+        </insert>
+        <insert tableName="wind_direction_roll_rule">
+            <column name="id" value="8"/>
+            <column name="creation_date" value="2025-09-14 21:09:00"/>
+            <column name="modification_date" value="2025-09-14 21:09:00"/>
+            <column name="version" value="0"/>
+            <column name="current_wind_direction" value="NORTH"/>
+            <column name="result_wind_direction" value="SOUTH"/>
+            <column name="roll_from" value="96"/>
+            <column name="roll_to" value="100"/>
+        </insert>
+
+        <!-- NORTH_EAST row -->
+        <insert tableName="wind_direction_roll_rule">
+            <column name="id" value="9"/>
+            <column name="creation_date" value="2025-09-14 21:09:00"/>
+            <column name="modification_date" value="2025-09-14 21:09:00"/>
+            <column name="version" value="0"/>
+            <column name="current_wind_direction" value="NORTH_EAST"/>
+            <column name="result_wind_direction" value="NORTH_EAST"/>
+            <column name="roll_from" value="1"/>
+            <column name="roll_to" value="10"/>
+        </insert>
+        <insert tableName="wind_direction_roll_rule">
+            <column name="id" value="10"/>
+            <column name="creation_date" value="2025-09-14 21:09:00"/>
+            <column name="modification_date" value="2025-09-14 21:09:00"/>
+            <column name="version" value="0"/>
+            <column name="current_wind_direction" value="NORTH_EAST"/>
+            <column name="result_wind_direction" value="NORTH"/>
+            <column name="roll_from" value="11"/>
+            <column name="roll_to" value="35"/>
+        </insert>
+        <insert tableName="wind_direction_roll_rule">
+            <column name="id" value="11"/>
+            <column name="creation_date" value="2025-09-14 21:09:00"/>
+            <column name="modification_date" value="2025-09-14 21:09:00"/>
+            <column name="version" value="0"/>
+            <column name="current_wind_direction" value="NORTH_EAST"/>
+            <column name="result_wind_direction" value="EAST"/>
+            <column name="roll_from" value="36"/>
+            <column name="roll_to" value="60"/>
+        </insert>
+        <insert tableName="wind_direction_roll_rule">
+            <column name="id" value="12"/>
+            <column name="creation_date" value="2025-09-14 21:09:00"/>
+            <column name="modification_date" value="2025-09-14 21:09:00"/>
+            <column name="version" value="0"/>
+            <column name="current_wind_direction" value="NORTH_EAST"/>
+            <column name="result_wind_direction" value="NORTH_WEST"/>
+            <column name="roll_from" value="61"/>
+            <column name="roll_to" value="75"/>
+        </insert>
+        <insert tableName="wind_direction_roll_rule">
+            <column name="id" value="13"/>
+            <column name="creation_date" value="2025-09-14 21:09:00"/>
+            <column name="modification_date" value="2025-09-14 21:09:00"/>
+            <column name="version" value="0"/>
+            <column name="current_wind_direction" value="NORTH_EAST"/>
+            <column name="result_wind_direction" value="SOUTH_EAST"/>
+            <column name="roll_from" value="76"/>
+            <column name="roll_to" value="85"/>
+        </insert>
+        <insert tableName="wind_direction_roll_rule">
+            <column name="id" value="14"/>
+            <column name="creation_date" value="2025-09-14 21:09:00"/>
+            <column name="modification_date" value="2025-09-14 21:09:00"/>
+            <column name="version" value="0"/>
+            <column name="current_wind_direction" value="NORTH_EAST"/>
+            <column name="result_wind_direction" value="SOUTH"/>
+            <column name="roll_from" value="86"/>
+            <column name="roll_to" value="90"/>
+        </insert>
+        <insert tableName="wind_direction_roll_rule">
+            <column name="id" value="15"/>
+            <column name="creation_date" value="2025-09-14 21:09:00"/>
+            <column name="modification_date" value="2025-09-14 21:09:00"/>
+            <column name="version" value="0"/>
+            <column name="current_wind_direction" value="NORTH_EAST"/>
+            <column name="result_wind_direction" value="SOUTH_WEST"/>
+            <column name="roll_from" value="91"/>
+            <column name="roll_to" value="95"/>
+        </insert>
+        <insert tableName="wind_direction_roll_rule">
+            <column name="id" value="16"/>
+            <column name="creation_date" value="2025-09-14 21:09:00"/>
+            <column name="modification_date" value="2025-09-14 21:09:00"/>
+            <column name="version" value="0"/>
+            <column name="current_wind_direction" value="NORTH_EAST"/>
+            <column name="result_wind_direction" value="WEST"/>
+            <column name="roll_from" value="96"/>
+            <column name="roll_to" value="100"/>
+        </insert>
+
+        <!-- EAST row -->
+        <insert tableName="wind_direction_roll_rule">
+            <column name="id" value="17"/>
+            <column name="creation_date" value="2025-09-14 21:09:00"/>
+            <column name="modification_date" value="2025-09-14 21:09:00"/>
+            <column name="version" value="0"/>
+            <column name="current_wind_direction" value="EAST"/>
+            <column name="result_wind_direction" value="EAST"/>
+            <column name="roll_from" value="1"/>
+            <column name="roll_to" value="10"/>
+        </insert>
+        <insert tableName="wind_direction_roll_rule">
+            <column name="id" value="18"/>
+            <column name="creation_date" value="2025-09-14 21:09:00"/>
+            <column name="modification_date" value="2025-09-14 21:09:00"/>
+            <column name="version" value="0"/>
+            <column name="current_wind_direction" value="EAST"/>
+            <column name="result_wind_direction" value="NORTH_EAST"/>
+            <column name="roll_from" value="11"/>
+            <column name="roll_to" value="35"/>
+        </insert>
+        <insert tableName="wind_direction_roll_rule">
+            <column name="id" value="19"/>
+            <column name="creation_date" value="2025-09-14 21:09:00"/>
+            <column name="modification_date" value="2025-09-14 21:09:00"/>
+            <column name="version" value="0"/>
+            <column name="current_wind_direction" value="EAST"/>
+            <column name="result_wind_direction" value="SOUTH_EAST"/>
+            <column name="roll_from" value="36"/>
+            <column name="roll_to" value="60"/>
+        </insert>
+        <insert tableName="wind_direction_roll_rule">
+            <column name="id" value="20"/>
+            <column name="creation_date" value="2025-09-14 21:09:00"/>
+            <column name="modification_date" value="2025-09-14 21:09:00"/>
+            <column name="version" value="0"/>
+            <column name="current_wind_direction" value="EAST"/>
+            <column name="result_wind_direction" value="NORTH"/>
+            <column name="roll_from" value="61"/>
+            <column name="roll_to" value="75"/>
+        </insert>
+        <insert tableName="wind_direction_roll_rule">
+            <column name="id" value="21"/>
+            <column name="creation_date" value="2025-09-14 21:09:00"/>
+            <column name="modification_date" value="2025-09-14 21:09:00"/>
+            <column name="version" value="0"/>
+            <column name="current_wind_direction" value="EAST"/>
+            <column name="result_wind_direction" value="SOUTH"/>
+            <column name="roll_from" value="76"/>
+            <column name="roll_to" value="85"/>
+        </insert>
+        <insert tableName="wind_direction_roll_rule">
+            <column name="id" value="22"/>
+            <column name="creation_date" value="2025-09-14 21:09:00"/>
+            <column name="modification_date" value="2025-09-14 21:09:00"/>
+            <column name="version" value="0"/>
+            <column name="current_wind_direction" value="EAST"/>
+            <column name="result_wind_direction" value="NORTH_WEST"/>
+            <column name="roll_from" value="86"/>
+            <column name="roll_to" value="90"/>
+        </insert>
+        <insert tableName="wind_direction_roll_rule">
+            <column name="id" value="23"/>
+            <column name="creation_date" value="2025-09-14 21:09:00"/>
+            <column name="modification_date" value="2025-09-14 21:09:00"/>
+            <column name="version" value="0"/>
+            <column name="current_wind_direction" value="EAST"/>
+            <column name="result_wind_direction" value="SOUTH_WEST"/>
+            <column name="roll_from" value="91"/>
+            <column name="roll_to" value="95"/>
+        </insert>
+        <insert tableName="wind_direction_roll_rule">
+            <column name="id" value="24"/>
+            <column name="creation_date" value="2025-09-14 21:09:00"/>
+            <column name="modification_date" value="2025-09-14 21:09:00"/>
+            <column name="version" value="0"/>
+            <column name="current_wind_direction" value="EAST"/>
+            <column name="result_wind_direction" value="WEST"/>
+            <column name="roll_from" value="96"/>
+            <column name="roll_to" value="100"/>
+        </insert>
+
+        <!-- SOUTH_EAST row -->
+        <insert tableName="wind_direction_roll_rule">
+            <column name="id" value="25"/>
+            <column name="creation_date" value="2025-09-14 21:09:00"/>
+            <column name="modification_date" value="2025-09-14 21:09:00"/>
+            <column name="version" value="0"/>
+            <column name="current_wind_direction" value="SOUTH_EAST"/>
+            <column name="result_wind_direction" value="SOUTH_EAST"/>
+            <column name="roll_from" value="1"/>
+            <column name="roll_to" value="10"/>
+        </insert>
+        <insert tableName="wind_direction_roll_rule">
+            <column name="id" value="26"/>
+            <column name="creation_date" value="2025-09-14 21:09:00"/>
+            <column name="modification_date" value="2025-09-14 21:09:00"/>
+            <column name="version" value="0"/>
+            <column name="current_wind_direction" value="SOUTH_EAST"/>
+            <column name="result_wind_direction" value="EAST"/>
+            <column name="roll_from" value="11"/>
+            <column name="roll_to" value="35"/>
+        </insert>
+        <insert tableName="wind_direction_roll_rule">
+            <column name="id" value="27"/>
+            <column name="creation_date" value="2025-09-14 21:09:00"/>
+            <column name="modification_date" value="2025-09-14 21:09:00"/>
+            <column name="version" value="0"/>
+            <column name="current_wind_direction" value="SOUTH_EAST"/>
+            <column name="result_wind_direction" value="SOUTH"/>
+            <column name="roll_from" value="36"/>
+            <column name="roll_to" value="60"/>
+        </insert>
+        <insert tableName="wind_direction_roll_rule">
+            <column name="id" value="28"/>
+            <column name="creation_date" value="2025-09-14 21:09:00"/>
+            <column name="modification_date" value="2025-09-14 21:09:00"/>
+            <column name="version" value="0"/>
+            <column name="current_wind_direction" value="SOUTH_EAST"/>
+            <column name="result_wind_direction" value="NORTH_EAST"/>
+            <column name="roll_from" value="61"/>
+            <column name="roll_to" value="75"/>
+        </insert>
+        <insert tableName="wind_direction_roll_rule">
+            <column name="id" value="29"/>
+            <column name="creation_date" value="2025-09-14 21:09:00"/>
+            <column name="modification_date" value="2025-09-14 21:09:00"/>
+            <column name="version" value="0"/>
+            <column name="current_wind_direction" value="SOUTH_EAST"/>
+            <column name="result_wind_direction" value="SOUTH_WEST"/>
+            <column name="roll_from" value="76"/>
+            <column name="roll_to" value="85"/>
+        </insert>
+        <insert tableName="wind_direction_roll_rule">
+            <column name="id" value="30"/>
+            <column name="creation_date" value="2025-09-14 21:09:00"/>
+            <column name="modification_date" value="2025-09-14 21:09:00"/>
+            <column name="version" value="0"/>
+            <column name="current_wind_direction" value="SOUTH_EAST"/>
+            <column name="result_wind_direction" value="NORTH"/>
+            <column name="roll_from" value="86"/>
+            <column name="roll_to" value="90"/>
+        </insert>
+        <insert tableName="wind_direction_roll_rule">
+            <column name="id" value="31"/>
+            <column name="creation_date" value="2025-09-14 21:09:00"/>
+            <column name="modification_date" value="2025-09-14 21:09:00"/>
+            <column name="version" value="0"/>
+            <column name="current_wind_direction" value="SOUTH_EAST"/>
+            <column name="result_wind_direction" value="WEST"/>
+            <column name="roll_from" value="91"/>
+            <column name="roll_to" value="95"/>
+        </insert>
+        <insert tableName="wind_direction_roll_rule">
+            <column name="id" value="32"/>
+            <column name="creation_date" value="2025-09-14 21:09:00"/>
+            <column name="modification_date" value="2025-09-14 21:09:00"/>
+            <column name="version" value="0"/>
+            <column name="current_wind_direction" value="SOUTH_EAST"/>
+            <column name="result_wind_direction" value="NORTH_WEST"/>
+            <column name="roll_from" value="96"/>
+            <column name="roll_to" value="100"/>
+        </insert>
+
+        <!-- SOUTH row -->
+        <insert tableName="wind_direction_roll_rule">
+            <column name="id" value="33"/>
+            <column name="creation_date" value="2025-09-14 21:09:00"/>
+            <column name="modification_date" value="2025-09-14 21:09:00"/>
+            <column name="version" value="0"/>
+            <column name="current_wind_direction" value="SOUTH"/>
+            <column name="result_wind_direction" value="SOUTH"/>
+            <column name="roll_from" value="1"/>
+            <column name="roll_to" value="10"/>
+        </insert>
+        <insert tableName="wind_direction_roll_rule">
+            <column name="id" value="34"/>
+            <column name="creation_date" value="2025-09-14 21:09:00"/>
+            <column name="modification_date" value="2025-09-14 21:09:00"/>
+            <column name="version" value="0"/>
+            <column name="current_wind_direction" value="SOUTH"/>
+            <column name="result_wind_direction" value="SOUTH_EAST"/>
+            <column name="roll_from" value="11"/>
+            <column name="roll_to" value="35"/>
+        </insert>
+        <insert tableName="wind_direction_roll_rule">
+            <column name="id" value="35"/>
+            <column name="creation_date" value="2025-09-14 21:09:00"/>
+            <column name="modification_date" value="2025-09-14 21:09:00"/>
+            <column name="version" value="0"/>
+            <column name="current_wind_direction" value="SOUTH"/>
+            <column name="result_wind_direction" value="SOUTH_WEST"/>
+            <column name="roll_from" value="36"/>
+            <column name="roll_to" value="60"/>
+        </insert>
+        <insert tableName="wind_direction_roll_rule">
+            <column name="id" value="36"/>
+            <column name="creation_date" value="2025-09-14 21:09:00"/>
+            <column name="modification_date" value="2025-09-14 21:09:00"/>
+            <column name="version" value="0"/>
+            <column name="current_wind_direction" value="SOUTH"/>
+            <column name="result_wind_direction" value="EAST"/>
+            <column name="roll_from" value="61"/>
+            <column name="roll_to" value="75"/>
+        </insert>
+        <insert tableName="wind_direction_roll_rule">
+            <column name="id" value="37"/>
+            <column name="creation_date" value="2025-09-14 21:09:00"/>
+            <column name="modification_date" value="2025-09-14 21:09:00"/>
+            <column name="version" value="0"/>
+            <column name="current_wind_direction" value="SOUTH"/>
+            <column name="result_wind_direction" value="WEST"/>
+            <column name="roll_from" value="76"/>
+            <column name="roll_to" value="85"/>
+        </insert>
+        <insert tableName="wind_direction_roll_rule">
+            <column name="id" value="38"/>
+            <column name="creation_date" value="2025-09-14 21:09:00"/>
+            <column name="modification_date" value="2025-09-14 21:09:00"/>
+            <column name="version" value="0"/>
+            <column name="current_wind_direction" value="SOUTH"/>
+            <column name="result_wind_direction" value="NORTH_EAST"/>
+            <column name="roll_from" value="86"/>
+            <column name="roll_to" value="90"/>
+        </insert>
+        <insert tableName="wind_direction_roll_rule">
+            <column name="id" value="39"/>
+            <column name="creation_date" value="2025-09-14 21:09:00"/>
+            <column name="modification_date" value="2025-09-14 21:09:00"/>
+            <column name="version" value="0"/>
+            <column name="current_wind_direction" value="SOUTH"/>
+            <column name="result_wind_direction" value="NORTH_WEST"/>
+            <column name="roll_from" value="91"/>
+            <column name="roll_to" value="95"/>
+        </insert>
+        <insert tableName="wind_direction_roll_rule">
+            <column name="id" value="40"/>
+            <column name="creation_date" value="2025-09-14 21:09:00"/>
+            <column name="modification_date" value="2025-09-14 21:09:00"/>
+            <column name="version" value="0"/>
+            <column name="current_wind_direction" value="SOUTH"/>
+            <column name="result_wind_direction" value="NORTH"/>
+            <column name="roll_from" value="96"/>
+            <column name="roll_to" value="100"/>
+        </insert>
+
+        <!-- SOUTH_WEST row -->
+        <insert tableName="wind_direction_roll_rule">
+            <column name="id" value="41"/>
+            <column name="creation_date" value="2025-09-14 21:09:00"/>
+            <column name="modification_date" value="2025-09-14 21:09:00"/>
+            <column name="version" value="0"/>
+            <column name="current_wind_direction" value="SOUTH_WEST"/>
+            <column name="result_wind_direction" value="SOUTH_WEST"/>
+            <column name="roll_from" value="1"/>
+            <column name="roll_to" value="10"/>
+        </insert>
+        <insert tableName="wind_direction_roll_rule">
+            <column name="id" value="42"/>
+            <column name="creation_date" value="2025-09-14 21:09:00"/>
+            <column name="modification_date" value="2025-09-14 21:09:00"/>
+            <column name="version" value="0"/>
+            <column name="current_wind_direction" value="SOUTH_WEST"/>
+            <column name="result_wind_direction" value="SOUTH"/>
+            <column name="roll_from" value="11"/>
+            <column name="roll_to" value="35"/>
+        </insert>
+        <insert tableName="wind_direction_roll_rule">
+            <column name="id" value="43"/>
+            <column name="creation_date" value="2025-09-14 21:09:00"/>
+            <column name="modification_date" value="2025-09-14 21:09:00"/>
+            <column name="version" value="0"/>
+            <column name="current_wind_direction" value="SOUTH_WEST"/>
+            <column name="result_wind_direction" value="WEST"/>
+            <column name="roll_from" value="36"/>
+            <column name="roll_to" value="60"/>
+        </insert>
+        <insert tableName="wind_direction_roll_rule">
+            <column name="id" value="44"/>
+            <column name="creation_date" value="2025-09-14 21:09:00"/>
+            <column name="modification_date" value="2025-09-14 21:09:00"/>
+            <column name="version" value="0"/>
+            <column name="current_wind_direction" value="SOUTH_WEST"/>
+            <column name="result_wind_direction" value="SOUTH_EAST"/>
+            <column name="roll_from" value="61"/>
+            <column name="roll_to" value="75"/>
+        </insert>
+        <insert tableName="wind_direction_roll_rule">
+            <column name="id" value="45"/>
+            <column name="creation_date" value="2025-09-14 21:09:00"/>
+            <column name="modification_date" value="2025-09-14 21:09:00"/>
+            <column name="version" value="0"/>
+            <column name="current_wind_direction" value="SOUTH_WEST"/>
+            <column name="result_wind_direction" value="NORTH_WEST"/>
+            <column name="roll_from" value="76"/>
+            <column name="roll_to" value="85"/>
+        </insert>
+        <insert tableName="wind_direction_roll_rule">
+            <column name="id" value="46"/>
+            <column name="creation_date" value="2025-09-14 21:09:00"/>
+            <column name="modification_date" value="2025-09-14 21:09:00"/>
+            <column name="version" value="0"/>
+            <column name="current_wind_direction" value="SOUTH_WEST"/>
+            <column name="result_wind_direction" value="EAST"/>
+            <column name="roll_from" value="86"/>
+            <column name="roll_to" value="90"/>
+        </insert>
+        <insert tableName="wind_direction_roll_rule">
+            <column name="id" value="47"/>
+            <column name="creation_date" value="2025-09-14 21:09:00"/>
+            <column name="modification_date" value="2025-09-14 21:09:00"/>
+            <column name="version" value="0"/>
+            <column name="current_wind_direction" value="SOUTH_WEST"/>
+            <column name="result_wind_direction" value="NORTH"/>
+            <column name="roll_from" value="91"/>
+            <column name="roll_to" value="95"/>
+        </insert>
+        <insert tableName="wind_direction_roll_rule">
+            <column name="id" value="48"/>
+            <column name="creation_date" value="2025-09-14 21:09:00"/>
+            <column name="modification_date" value="2025-09-14 21:09:00"/>
+            <column name="version" value="0"/>
+            <column name="current_wind_direction" value="SOUTH_WEST"/>
+            <column name="result_wind_direction" value="NORTH_EAST"/>
+            <column name="roll_from" value="96"/>
+            <column name="roll_to" value="100"/>
+        </insert>
+
+        <!-- WEST row -->
+        <insert tableName="wind_direction_roll_rule">
+            <column name="id" value="49"/>
+            <column name="creation_date" value="2025-09-14 21:09:00"/>
+            <column name="modification_date" value="2025-09-14 21:09:00"/>
+            <column name="version" value="0"/>
+            <column name="current_wind_direction" value="WEST"/>
+            <column name="result_wind_direction" value="WEST"/>
+            <column name="roll_from" value="1"/>
+            <column name="roll_to" value="10"/>
+        </insert>
+        <insert tableName="wind_direction_roll_rule">
+            <column name="id" value="50"/>
+            <column name="creation_date" value="2025-09-14 21:09:00"/>
+            <column name="modification_date" value="2025-09-14 21:09:00"/>
+            <column name="version" value="0"/>
+            <column name="current_wind_direction" value="WEST"/>
+            <column name="result_wind_direction" value="NORTH_WEST"/>
+            <column name="roll_from" value="11"/>
+            <column name="roll_to" value="35"/>
+        </insert>
+        <insert tableName="wind_direction_roll_rule">
+            <column name="id" value="51"/>
+            <column name="creation_date" value="2025-09-14 21:09:00"/>
+            <column name="modification_date" value="2025-09-14 21:09:00"/>
+            <column name="version" value="0"/>
+            <column name="current_wind_direction" value="WEST"/>
+            <column name="result_wind_direction" value="SOUTH_WEST"/>
+            <column name="roll_from" value="36"/>
+            <column name="roll_to" value="60"/>
+        </insert>
+        <insert tableName="wind_direction_roll_rule">
+            <column name="id" value="52"/>
+            <column name="creation_date" value="2025-09-14 21:09:00"/>
+            <column name="modification_date" value="2025-09-14 21:09:00"/>
+            <column name="version" value="0"/>
+            <column name="current_wind_direction" value="WEST"/>
+            <column name="result_wind_direction" value="NORTH"/>
+            <column name="roll_from" value="61"/>
+            <column name="roll_to" value="75"/>
+        </insert>
+        <insert tableName="wind_direction_roll_rule">
+            <column name="id" value="53"/>
+            <column name="creation_date" value="2025-09-14 21:09:00"/>
+            <column name="modification_date" value="2025-09-14 21:09:00"/>
+            <column name="version" value="0"/>
+            <column name="current_wind_direction" value="WEST"/>
+            <column name="result_wind_direction" value="SOUTH"/>
+            <column name="roll_from" value="76"/>
+            <column name="roll_to" value="85"/>
+        </insert>
+        <insert tableName="wind_direction_roll_rule">
+            <column name="id" value="54"/>
+            <column name="creation_date" value="2025-09-14 21:09:00"/>
+            <column name="modification_date" value="2025-09-14 21:09:00"/>
+            <column name="version" value="0"/>
+            <column name="current_wind_direction" value="WEST"/>
+            <column name="result_wind_direction" value="NORTH_EAST"/>
+            <column name="roll_from" value="86"/>
+            <column name="roll_to" value="90"/>
+        </insert>
+        <insert tableName="wind_direction_roll_rule">
+            <column name="id" value="55"/>
+            <column name="creation_date" value="2025-09-14 21:09:00"/>
+            <column name="modification_date" value="2025-09-14 21:09:00"/>
+            <column name="version" value="0"/>
+            <column name="current_wind_direction" value="WEST"/>
+            <column name="result_wind_direction" value="SOUTH_EAST"/>
+            <column name="roll_from" value="91"/>
+            <column name="roll_to" value="95"/>
+        </insert>
+        <insert tableName="wind_direction_roll_rule">
+            <column name="id" value="56"/>
+            <column name="creation_date" value="2025-09-14 21:09:00"/>
+            <column name="modification_date" value="2025-09-14 21:09:00"/>
+            <column name="version" value="0"/>
+            <column name="current_wind_direction" value="WEST"/>
+            <column name="result_wind_direction" value="EAST"/>
+            <column name="roll_from" value="96"/>
+            <column name="roll_to" value="100"/>
+        </insert>
+
+        <!-- NORTH_WEST row -->
+        <insert tableName="wind_direction_roll_rule">
+            <column name="id" value="57"/>
+            <column name="creation_date" value="2025-09-14 21:09:00"/>
+            <column name="modification_date" value="2025-09-14 21:09:00"/>
+            <column name="version" value="0"/>
+            <column name="current_wind_direction" value="NORTH_WEST"/>
+            <column name="result_wind_direction" value="NORTH_WEST"/>
+            <column name="roll_from" value="1"/>
+            <column name="roll_to" value="10"/>
+        </insert>
+        <insert tableName="wind_direction_roll_rule">
+            <column name="id" value="58"/>
+            <column name="creation_date" value="2025-09-14 21:09:00"/>
+            <column name="modification_date" value="2025-09-14 21:09:00"/>
+            <column name="version" value="0"/>
+            <column name="current_wind_direction" value="NORTH_WEST"/>
+            <column name="result_wind_direction" value="NORTH"/>
+            <column name="roll_from" value="11"/>
+            <column name="roll_to" value="35"/>
+        </insert>
+        <insert tableName="wind_direction_roll_rule">
+            <column name="id" value="59"/>
+            <column name="creation_date" value="2025-09-14 21:09:00"/>
+            <column name="modification_date" value="2025-09-14 21:09:00"/>
+            <column name="version" value="0"/>
+            <column name="current_wind_direction" value="NORTH_WEST"/>
+            <column name="result_wind_direction" value="WEST"/>
+            <column name="roll_from" value="36"/>
+            <column name="roll_to" value="60"/>
+        </insert>
+        <insert tableName="wind_direction_roll_rule">
+            <column name="id" value="60"/>
+            <column name="creation_date" value="2025-09-14 21:09:00"/>
+            <column name="modification_date" value="2025-09-14 21:09:00"/>
+            <column name="version" value="0"/>
+            <column name="current_wind_direction" value="NORTH_WEST"/>
+            <column name="result_wind_direction" value="NORTH_EAST"/>
+            <column name="roll_from" value="61"/>
+            <column name="roll_to" value="75"/>
+        </insert>
+        <insert tableName="wind_direction_roll_rule">
+            <column name="id" value="61"/>
+            <column name="creation_date" value="2025-09-14 21:09:00"/>
+            <column name="modification_date" value="2025-09-14 21:09:00"/>
+            <column name="version" value="0"/>
+            <column name="current_wind_direction" value="NORTH_WEST"/>
+            <column name="result_wind_direction" value="SOUTH_WEST"/>
+            <column name="roll_from" value="76"/>
+            <column name="roll_to" value="85"/>
+        </insert>
+        <insert tableName="wind_direction_roll_rule">
+            <column name="id" value="62"/>
+            <column name="creation_date" value="2025-09-14 21:09:00"/>
+            <column name="modification_date" value="2025-09-14 21:09:00"/>
+            <column name="version" value="0"/>
+            <column name="current_wind_direction" value="NORTH_WEST"/>
+            <column name="result_wind_direction" value="NORTH-EAST"/>
+            <column name="roll_from" value="86"/>
+            <column name="roll_to" value="90"/>
+        </insert>
+        <insert tableName="wind_direction_roll_rule">
+            <column name="id" value="63"/>
+            <column name="creation_date" value="2025-09-14 21:09:00"/>
+            <column name="modification_date" value="2025-09-14 21:09:00"/>
+            <column name="version" value="0"/>
+            <column name="current_wind_direction" value="NORTH_WEST"/>
+            <column name="result_wind_direction" value="SOUTH"/>
+            <column name="roll_from" value="91"/>
+            <column name="roll_to" value="95"/>
+        </insert>
+        <insert tableName="wind_direction_roll_rule">
+            <column name="id" value="64"/>
+            <column name="creation_date" value="2025-09-14 21:09:00"/>
+            <column name="modification_date" value="2025-09-14 21:09:00"/>
+            <column name="version" value="0"/>
+            <column name="current_wind_direction" value="NORTH_WEST"/>
+            <column name="result_wind_direction" value="SOUTH_EAST"/>
+            <column name="roll_from" value="96"/>
+            <column name="roll_to" value="100"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>

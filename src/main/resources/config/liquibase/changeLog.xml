@@ -5,6 +5,9 @@
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
 
-    <include file="classpath:config/liquibase/database/14-09-2025-create-tables.xml"/>
+    <include file="classpath:config/liquibase/database/2025-09-14-create-tables.xml"/>
+    <include file="classpath:config/liquibase/configuration/configuration-weather-roll-rule.xml"/>
+    <include file="classpath:config/liquibase/configuration/configuration-wind-roll-rule.xml"/>
+    <include file="classpath:config/liquibase/configuration/configuration-wind-direction-roll-rule.xml"/>
 
 </databaseChangeLog>
