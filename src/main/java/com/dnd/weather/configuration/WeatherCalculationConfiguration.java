@@ -1,10 +1,7 @@
 package com.dnd.weather.configuration;
 
 import com.dnd.weather.repository.*;
-import com.dnd.weather.service.CalculateWeatherFacade;
-import com.dnd.weather.service.CalculateWeatherService;
-import com.dnd.weather.service.CalculateWindDirectionService;
-import com.dnd.weather.service.CalculateWindService;
+import com.dnd.weather.service.*;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -27,12 +24,19 @@ public class WeatherCalculationConfiguration {
     }
 
     @Bean
+    public CalculateTimeService calculateTimeService() {
+        return new CalculateTimeService();
+    }
+
+    @Bean
     public CalculateWeatherFacade calculateWeatherFacade(SessionRepository sessionRepository,
                                                          SessionStateRepository sessionStateRepository,
                                                          CalculateWeatherService calculateWeatherService,
                                                          CalculateWindService calculateWindService,
-                                                         CalculateWindDirectionService calculateWindDirectionService) {
-        return new CalculateWeatherFacade(sessionRepository, sessionStateRepository, calculateWeatherService, calculateWindService, calculateWindDirectionService);
+                                                         CalculateWindDirectionService calculateWindDirectionService,
+                                                         CalculateTimeService calculateTimeService) {
+        return new CalculateWeatherFacade(sessionRepository, sessionStateRepository, calculateWeatherService,
+                calculateWindService, calculateWindDirectionService, calculateTimeService);
     }
 
 }

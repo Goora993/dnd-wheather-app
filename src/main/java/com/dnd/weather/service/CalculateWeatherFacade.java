@@ -13,33 +13,39 @@ public class CalculateWeatherFacade {
     private final CalculateWeatherService calculateWeatherService;
     private final CalculateWindService calculateWindService;
     private final CalculateWindDirectionService calculateWindDirectionService;
+    private final CalculateTimeService calculateTimeService;
 
     public CalculateWeatherFacade(SessionRepository sessionRepository,
                                   SessionStateRepository sessionStateRepository,
                                   CalculateWeatherService calculateWeatherService,
                                   CalculateWindService calculateWindService,
-                                  CalculateWindDirectionService calculateWindDirectionService) {
+                                  CalculateWindDirectionService calculateWindDirectionService,
+                                  CalculateTimeService calculateTimeService) {
         this.sessionRepository = sessionRepository;
         this.sessionStateRepository = sessionStateRepository;
         this.calculateWeatherService = calculateWeatherService;
         this.calculateWindService = calculateWindService;
         this.calculateWindDirectionService = calculateWindDirectionService;
+        this.calculateTimeService = calculateTimeService;
     }
 
     @Transactional
-    public void calculateWeather(int roll, long userId) {
+    public void calculateWeather(int weatherRoll, int timeRoll, long userId) {
         Session session = sessionRepository.findByUserDataId(userId);
         SessionState sessionState = sessionStateRepository.findBySession(session);
 
-        sessionState = calculateWeatherService.calculateWeather(roll, sessionState);
-        sessionState = calculateWindService.calculateWind(roll, sessionState);
-        sessionState = calculateWindDirectionService.calculateWindDirection(roll, sessionState);
+        sessionState = calculateWeatherService.calculateWeather(weatherRoll, sessionState);
+        sessionState = calculateWindService.calculateWind(weatherRoll, sessionState);
+        sessionState = calculateWindDirectionService.calculateWindDirection(weatherRoll, sessionState);
 
         sessionStateRepository.save(sessionState);
 
-        System.out.println("Roll " + roll + ": " + sessionState.getWeather()
-                + " " + sessionState.getWind()
-                + " " + sessionState.getWindDirection());
+        int duration = calculateTimeService.calculateTime(timeRoll);
+
+        System.out.println("Weather roll [" + weatherRoll + "]: duration " + duration + "h "
+                + ", weather: " + sessionState.getWeather()
+                + ", wind: " + sessionState.getWind()
+                + ", wind direction: " + sessionState.getWindDirection());
     }
 
 }

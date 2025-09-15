@@ -20,7 +20,7 @@ public class WeatherAppApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) {
-		calculateWeatherFacade.calculateWeather(41, 1);
+		calculateWeatherFacade.calculateWeather(1, 10, 1);
 	}
 
 }

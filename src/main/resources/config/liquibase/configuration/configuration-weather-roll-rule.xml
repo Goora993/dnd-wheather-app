@@ -84,7 +84,7 @@
             <column name="current_weather" value="CLOUDS"/>
             <column name="result_weather" value="CLOUDS"/>
             <column name="roll_from" value="15"/>
-            <column name="roll_to" value="16"/>
+            <column name="roll_to" value="64"/>
         </insert>
         <insert tableName="weather_roll_rule">
             <column name="id" value="9"/>
