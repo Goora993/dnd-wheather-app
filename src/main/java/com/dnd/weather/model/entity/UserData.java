@@ -1,4 +1,4 @@
-package com.dnd.weather_app.model.entity;
+package com.dnd.weather.model.entity;
 
 import jakarta.persistence.*;
 import lombok.Getter;
@@ -21,10 +21,5 @@ public class UserData extends AbstractEntity {
     private String password;
 
     private boolean isSubscribed;
-
-    public UserData(String password, String email) {
-        this.password = password;
-        this.email = email;
-    }
 
 }

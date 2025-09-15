@@ -1,4 +1,4 @@
-package com.dnd.weather_app.model.enumeration;
+package com.dnd.weather.model.enumeration;
 
 public enum WindDirection {
 

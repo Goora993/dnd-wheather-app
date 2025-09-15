@@ -1,4 +1,4 @@
-package com.dnd.weather_app.model.entity;
+package com.dnd.weather.model.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.ManyToOne;

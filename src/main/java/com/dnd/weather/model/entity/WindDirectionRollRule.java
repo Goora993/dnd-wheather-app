@@ -1,7 +1,9 @@
-package com.dnd.weather_app.model.entity;
+package com.dnd.weather.model.entity;
 
-import com.dnd.weather_app.model.enumeration.WeatherType;
+import com.dnd.weather.model.enumeration.WindDirection;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -18,8 +20,10 @@ public class WindDirectionRollRule extends AbstractEntity {
 
     private int roll_to;
 
-    private WeatherType currentWindDirection;
+    @Enumerated(EnumType.STRING)
+    private WindDirection currentWindDirection;
 
-    private WeatherType resultWindDirection;
+    @Enumerated(EnumType.STRING)
+    private WindDirection resultWindDirection;
 
 }
