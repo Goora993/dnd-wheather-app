@@ -1,0 +1,32 @@
+spring:
+  application:
+    name: weather-app
+  datasource:
+    url: jdbc:postgresql://localhost:54322/postgres
+    username: postgres
+    password: postgres
+    hikari:
+      connection-timeout: 20000
+      maximum-pool-size: 5
+  jpa:
+    defer-datasource-initialization: false
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        jdbc:
+          lob:
+            non_contextual_creation: true
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+  liquibase:
+    enabled: true
+
+
+# JWT
+dndweather:
+  app:
+    jwtSecret: ======================JWTSECRET===========================
+    jwtExpirationMs: 3600000
+    jwtRefreshExpirationMs: 86400000
+    jwtRefreshCookieName: refreshToken
