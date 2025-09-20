@@ -16,7 +16,7 @@ import java.util.UUID;
 @Service
 public class RefreshTokenServiceImpl implements RefreshTokenService {
 
-    @Value("${kayakmanagement.app.jwtRefreshExpirationMs}")
+    @Value("${dndweather.app.jwtRefreshExpirationMs}")
     private Long refreshTokenDurationMs;
 
     private final RefreshTokenDao refreshTokenDao;

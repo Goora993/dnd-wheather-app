@@ -1,0 +1,28 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+    <changeSet author="dawid.gorkiewicz" id="wind_roll_rule">
+        <insert tableName="role">
+            <column name="id" value="1"/>
+            <column name="creation_date" value="2025-09-18 21:09:00"/>
+            <column name="modification_date" value="2025-09-18 21:09:00"/>
+            <column name="version" value="0"/>
+            <column name="name" value="FREE"/>
+        </insert>
+        <insert tableName="role">
+            <column name="id" value="2"/>
+            <column name="creation_date" value="2025-09-18 21:09:00"/>
+            <column name="modification_date" value="2025-09-18 21:09:00"/>
+            <column name="version" value="0"/>
+            <column name="name" value="SUBSCRIBER"/>
+        </insert>
+        <insert tableName="role">
+            <column name="id" value="3"/>
+            <column name="creation_date" value="2025-09-18 21:09:00"/>
+            <column name="modification_date" value="2025-09-18 21:09:00"/>
+            <column name="version" value="0"/>
+            <column name="name" value="UNSUBSCRIBER"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>

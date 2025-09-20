@@ -13,4 +13,74 @@
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
+    <properties>
+        <spring.boot.version>3.1.5</spring.boot.version>
+        <postgresql.version>42.6.0</postgresql.version>
+        <liquibase-core.version>4.22.0</liquibase-core.version>
+        <liquibase-maven-plugin.version>4.2.2</liquibase-maven-plugin.version>
+        <liquibase-hibernate6.version>4.18.0</liquibase-hibernate6.version>
+        <jakarta.validation-api.version>3.0.2</jakarta.validation-api.version>
+        <javatuples.version>1.2</javatuples.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-validation</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>${postgresql.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.liquibase</groupId>
+            <artifactId>liquibase-core</artifactId>
+            <version>${liquibase-core.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.javatuples</groupId>
+            <artifactId>javatuples</artifactId>
+            <version>${javatuples.version}</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.liquibase</groupId>
+                <artifactId>liquibase-maven-plugin</artifactId>
+                <version>${liquibase-maven-plugin.version}</version>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.liquibase.ext</groupId>
+                        <artifactId>liquibase-hibernate6</artifactId>
+                        <version>${liquibase-hibernate6.version}</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>org.springframework.boot</groupId>
+                        <artifactId>spring-boot-starter-data-jpa</artifactId>
+                        <version>${spring.boot.version}</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>jakarta.validation</groupId>
+                        <artifactId>jakarta.validation-api</artifactId>
+                        <version>${jakarta.validation-api.version}</version>
+                    </dependency>
+                </dependencies>
+
+                <configuration>
+                    <propertyFile>src/main/resources/liquibase.properties</propertyFile>
+                    <outputChangeLogFile>src/main/resources/liquibase-outputChangeLog.xml</outputChangeLogFile>
+                    <changeLogFile>src/main/resources/liquibase/changeLog.xml</changeLogFile>
+                    <diffChangeLogFile>src/main/resources/liquibase-diffChangeLog.xml</diffChangeLogFile>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
 </project>

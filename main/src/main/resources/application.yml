@@ -21,7 +21,15 @@ spring:
     show-sql: true
   liquibase:
     enabled: true
-
+    change-log: classpath:liquibase/changeLog.xml
+logging:
+  level:
+    org.springframework.security: DEBUG
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "beans,health,info"
 
 # JWT
 dndweather:
