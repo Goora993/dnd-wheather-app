@@ -1,16 +1,14 @@
 package com.dnd.weather.domain.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.Table;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import jakarta.persistence.*;
+import lombok.*;
+import lombok.experimental.SuperBuilder;
 
+@SuperBuilder
 @Getter
 @Setter
-@NoArgsConstructor
 @Entity
+@NoArgsConstructor
 @Table(name = "session")
 public class Session extends AbstractEntity {
 
@@ -18,5 +16,8 @@ public class Session extends AbstractEntity {
     private UserData userData;
 
     private String name;
+
+    @OneToOne(mappedBy = "session", cascade = CascadeType.PERSIST)
+    private SessionState sessionState;
 
 }

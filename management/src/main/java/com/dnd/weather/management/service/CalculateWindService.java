@@ -3,20 +3,20 @@ package com.dnd.weather.management.service;
 
 import com.dnd.weather.domain.entity.SessionState;
 import com.dnd.weather.domain.enumeration.WindType;
-import com.dnd.weather.dao.WindRollRuleDao;
+import com.dnd.weather.persistence.repository.WindRollRuleJpaRepository;
 
 public class CalculateWindService {
 
-    private final WindRollRuleDao windRollRuleDao;
+    private final WindRollRuleJpaRepository windRollRuleJpaRepository;
 
-    public CalculateWindService(WindRollRuleDao windRollRuleDao) {
-        this.windRollRuleDao = windRollRuleDao;
+    public CalculateWindService(WindRollRuleJpaRepository windRollRuleJpaRepository) {
+        this.windRollRuleJpaRepository = windRollRuleJpaRepository;
     }
 
     public SessionState calculateWind(int roll, SessionState sessionState) {
 
         WindType currentWind = sessionState.getWind();
-        WindType resultWind = windRollRuleDao.findResultWind(currentWind, roll);
+        WindType resultWind = windRollRuleJpaRepository.findResultWind(currentWind, roll);
 
         sessionState.setWind(resultWind);
 

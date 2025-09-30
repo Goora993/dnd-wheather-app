@@ -4,27 +4,27 @@ import com.dnd.weather.domain.entity.Session;
 import com.dnd.weather.domain.entity.SessionState;
 import com.dnd.weather.management.dto.request.RollWeatherRequest;
 import com.dnd.weather.management.dto.response.CurrentWeatherResponse;
-import com.dnd.weather.dao.SessionDao;
-import com.dnd.weather.dao.SessionStateDao;
+import com.dnd.weather.persistence.repository.SessionJpaRepository;
+import com.dnd.weather.persistence.repository.SessionStateJpaRepository;
 import jakarta.transaction.Transactional;
 
 public class CalculateWeatherFacade {
 
-    private final SessionDao sessionDao;
-    private final SessionStateDao sessionStateDao;
+    private final SessionJpaRepository sessionJpaRepository;
+    private final SessionStateJpaRepository sessionStateJpaRepository;
     private final CalculateWeatherService calculateWeatherService;
     private final CalculateWindService calculateWindService;
     private final CalculateWindDirectionService calculateWindDirectionService;
     private final CalculateTimeService calculateTimeService;
 
-    public CalculateWeatherFacade(SessionDao sessionDao,
-                                  SessionStateDao sessionStateDao,
+    public CalculateWeatherFacade(SessionJpaRepository sessionJpaRepository,
+                                  SessionStateJpaRepository sessionStateJpaRepository,
                                   CalculateWeatherService calculateWeatherService,
                                   CalculateWindService calculateWindService,
                                   CalculateWindDirectionService calculateWindDirectionService,
                                   CalculateTimeService calculateTimeService) {
-        this.sessionDao = sessionDao;
-        this.sessionStateDao = sessionStateDao;
+        this.sessionJpaRepository = sessionJpaRepository;
+        this.sessionStateJpaRepository = sessionStateJpaRepository;
         this.calculateWeatherService = calculateWeatherService;
         this.calculateWindService = calculateWindService;
         this.calculateWindDirectionService = calculateWindDirectionService;
@@ -33,14 +33,14 @@ public class CalculateWeatherFacade {
 
     @Transactional
     public CurrentWeatherResponse calculateWeather(RollWeatherRequest rollWeatherRequest) {
-        Session session = sessionDao.findByUserDataId(1);
-        SessionState sessionState = sessionStateDao.findBySession(session);
+        Session session = sessionJpaRepository.findByUserDataId(1);
+        SessionState sessionState = sessionStateJpaRepository.findBySession(session);
 
         sessionState = calculateWeatherService.calculateWeather(rollWeatherRequest.weatherRoll(), sessionState);
         sessionState = calculateWindService.calculateWind(rollWeatherRequest.weatherRoll(), sessionState);
         sessionState = calculateWindDirectionService.calculateWindDirection(rollWeatherRequest.weatherRoll(), sessionState);
 
-        sessionStateDao.save(sessionState);
+        sessionStateJpaRepository.save(sessionState);
 
         int duration = calculateTimeService.calculateTime(rollWeatherRequest.timeRoll());
 

@@ -5,7 +5,7 @@ import com.dnd.weather.auth.security.UserDetailsImpl;
 import com.dnd.weather.auth.service.AuthService;
 import com.dnd.weather.auth.service.JwtService;
 import com.dnd.weather.auth.service.RefreshTokenService;
-import com.dnd.weather.dao.UserDataDao;
+import com.dnd.weather.persistence.repository.UserDataJpaRepository;
 import com.dnd.weather.domain.entity.RefreshToken;
 import com.dnd.weather.domain.entity.UserData;
 import org.springframework.http.ResponseCookie;
@@ -28,17 +28,17 @@ public class AuthServiceImpl implements AuthService {
 
     private final AuthenticationManager authenticationManager;
 
-    private final UserDataDao userDataDao;
+    private final UserDataJpaRepository userDataJpaRepository;
 
     private final PasswordEncoder encoder;
 
     public AuthServiceImpl(RefreshTokenService refreshTokenService, JwtService jwtService,
-                           AuthenticationManager authenticationManager, UserDataDao userDataDao,
+                           AuthenticationManager authenticationManager, UserDataJpaRepository userDataJpaRepository,
                            PasswordEncoder encoder) {
         this.refreshTokenService = refreshTokenService;
         this.jwtService = jwtService;
         this.authenticationManager = authenticationManager;
-        this.userDataDao = userDataDao;
+        this.userDataJpaRepository = userDataJpaRepository;
         this.encoder = encoder;
     }
 
@@ -53,12 +53,12 @@ public class AuthServiceImpl implements AuthService {
 
     @Override
     public Boolean doesUserExistByUsername(String username) {
-        return userDataDao.existsByUsername(username);
+        return userDataJpaRepository.existsByUsername(username);
     }
 
     @Override
     public Boolean doesUserExistByEmail(String email) {
-        return userDataDao.existsByEmail(email);
+        return userDataJpaRepository.existsByEmail(email);
     }
 
     @Override
@@ -73,7 +73,7 @@ public class AuthServiceImpl implements AuthService {
         UserData userData = new UserData(registerRequest.getUsername(), encoder.encode(registerRequest.getPassword()),
                 registerRequest.getEmail());
 
-        return userDataDao.save(userData);
+        return userDataJpaRepository.save(userData);
     }
 
 }

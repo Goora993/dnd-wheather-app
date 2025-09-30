@@ -2,19 +2,19 @@ package com.dnd.weather.management.service;
 
 import com.dnd.weather.domain.entity.SessionState;
 import com.dnd.weather.domain.enumeration.WeatherType;
-import com.dnd.weather.dao.WeatherRollRuleDao;
+import com.dnd.weather.persistence.repository.WeatherRollRuleJpaRepository;
 
 public class CalculateWeatherService {
 
-    private final WeatherRollRuleDao weatherRollRuleDao;
+    private final WeatherRollRuleJpaRepository weatherRollRuleJpaRepository;
 
-    public CalculateWeatherService(WeatherRollRuleDao weatherRollRuleDao) {
-        this.weatherRollRuleDao = weatherRollRuleDao;
+    public CalculateWeatherService(WeatherRollRuleJpaRepository weatherRollRuleJpaRepository) {
+        this.weatherRollRuleJpaRepository = weatherRollRuleJpaRepository;
     }
 
     public SessionState calculateWeather(int roll, SessionState sessionState) {
         WeatherType currentWeather = sessionState.getWeather();
-        WeatherType resultWeather = weatherRollRuleDao.findResultWeather(currentWeather, roll);
+        WeatherType resultWeather = weatherRollRuleJpaRepository.findResultWeather(currentWeather, roll);
 
         sessionState.setWeather(resultWeather);
 

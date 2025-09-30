@@ -1,4 +1,4 @@
-package com.dnd.weather.dao;
+package com.dnd.weather.persistence;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
