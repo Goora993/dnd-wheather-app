@@ -16,6 +16,7 @@
             </column>
             <column name="name" type="VARCHAR(255)"/>
             <column name="user_data_id" type="BIGINT"/>
+            <column name="session_state_id" type="BIGINT"/>
         </createTable>
     </changeSet>
     <changeSet author="dawid.gorkiewicz" id="1757867811359-2">
@@ -41,7 +42,6 @@
             <column name="weather" type="VARCHAR(255)"/>
             <column name="wind" type="VARCHAR(255)"/>
             <column name="wind_direction" type="VARCHAR(255)"/>
-            <column name="session_id" type="BIGINT"/>
         </createTable>
     </changeSet>
     <changeSet author="dawid.gorkiewicz" id="1757867811359-3">

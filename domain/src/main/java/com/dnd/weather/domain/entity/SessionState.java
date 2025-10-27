@@ -17,10 +17,6 @@ import lombok.experimental.SuperBuilder;
 @Table(name = "session_state")
 public class SessionState extends AbstractEntity {
 
-    @OneToOne
-    @JoinColumn(name = "session_id")
-    private Session session;
-
     private int hour;
 
     private int minute;

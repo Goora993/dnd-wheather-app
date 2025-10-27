@@ -1,4 +1,10 @@
 package com.dnd.weather.management.dto.response;
 
-public record CurrentWeatherResponse(String weatherType, String windType, String windDirection, int duration) {
+import com.dnd.weather.domain.enumeration.WeatherType;
+import com.dnd.weather.domain.enumeration.WindDirection;
+import com.dnd.weather.domain.enumeration.WindType;
+import lombok.Builder;
+
+@Builder
+public record CurrentWeatherResponse(WeatherType weatherType, WindType windType, WindDirection windDirection, int duration) {
 }

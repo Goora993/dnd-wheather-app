@@ -17,7 +17,12 @@ public class SessionRepositoryImpl implements SessionRepository {
 
     @Override
     public SessionBusinessObject save(SessionBusinessObject session) {
+        System.out.println("lala");
         return sessionMapper.toBO(sessionJpaRepository.save(sessionMapper.toEntity(session)));
     }
 
+    @Override
+    public SessionBusinessObject findByUserDataId(Long sessionId) {
+        return sessionMapper.toBO(sessionJpaRepository.findByUserDataId(sessionId));
+    }
 }

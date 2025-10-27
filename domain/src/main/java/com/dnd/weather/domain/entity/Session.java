@@ -17,7 +17,8 @@ public class Session extends AbstractEntity {
 
     private String name;
 
-    @OneToOne(mappedBy = "session", cascade = CascadeType.PERSIST)
+    @OneToOne(cascade = CascadeType.ALL, orphanRemoval = true)
+    @JoinColumn(name = "session_state_id")
     private SessionState sessionState;
 
 }

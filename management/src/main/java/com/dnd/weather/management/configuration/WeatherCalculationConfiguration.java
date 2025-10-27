@@ -3,6 +3,10 @@ package com.dnd.weather.management.configuration;
 import com.dnd.weather.management.business.repository.SessionRepository;
 import com.dnd.weather.management.business.repository.impl.SessionRepositoryImpl;
 import com.dnd.weather.management.controller.WeatherController;
+import com.dnd.weather.management.mapper.dto.CurrentWeatherDtoMapper;
+import com.dnd.weather.management.mapper.dto.SessionDtoMapper;
+import com.dnd.weather.management.mapper.dto.impl.CurrentWeatherDtoMapperImpl;
+import com.dnd.weather.management.mapper.dto.impl.SessionDtoMapperImpl;
 import com.dnd.weather.management.mapper.entity.SessionStateMapper;
 import com.dnd.weather.management.mapper.entity.impl.SessionMapperImpl;
 import com.dnd.weather.management.mapper.entity.impl.SessionStateMapperImpl;
@@ -14,6 +18,16 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class WeatherCalculationConfiguration {
+
+    @Bean
+    public CurrentWeatherDtoMapper currentWeatherDtoMapper() {
+        return new CurrentWeatherDtoMapperImpl();
+    }
+
+    @Bean
+    public SessionDtoMapper sessionDtoMapper() {
+        return new SessionDtoMapperImpl();
+    }
 
     @Bean
     public SessionStateMapper sessionStateMapper() {
@@ -36,8 +50,8 @@ public class WeatherCalculationConfiguration {
     }
 
     @Bean
-    public SessionDataService sessionDataService(CurrentUserService currentUserService, SessionJpaRepository sessionJpaRepository, SessionRepository sessionRepository) {
-        return new SessionDataService(currentUserService, sessionJpaRepository, sessionRepository);
+    public SessionDataService sessionDataService(CurrentUserService currentUserService, SessionRepository sessionRepository, SessionDtoMapper sessionDtoMapper) {
+        return new SessionDataService(currentUserService, sessionRepository, sessionDtoMapper);
     }
 
     @Bean
@@ -61,13 +75,13 @@ public class WeatherCalculationConfiguration {
     }
 
     @Bean
-    public CalculateWeatherFacade calculateWeatherFacade(SessionJpaRepository sessionJpaRepository,
-                                                         SessionStateJpaRepository sessionStateJpaRepository,
+    public CalculateWeatherFacade calculateWeatherFacade(SessionRepository sessionRepository,
+                                                         CurrentWeatherDtoMapper currentWeatherDtoMapper,
                                                          CalculateWeatherService calculateWeatherService,
                                                          CalculateWindService calculateWindService,
                                                          CalculateWindDirectionService calculateWindDirectionService,
                                                          CalculateTimeService calculateTimeService) {
-        return new CalculateWeatherFacade(sessionJpaRepository, sessionStateJpaRepository, calculateWeatherService,
+        return new CalculateWeatherFacade(sessionRepository, currentWeatherDtoMapper, calculateWeatherService,
                 calculateWindService, calculateWindDirectionService, calculateTimeService);
     }
 
