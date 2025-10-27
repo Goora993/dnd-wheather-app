@@ -49,7 +49,7 @@ public class CalculateWeatherFacade {
                 )
         );
 
-        sessionRepository.save(sessionBusinessObject); // TODO: Error is thrown there, seems like I forgot version during mapping?
+        sessionRepository.save(sessionBusinessObject);
 
 
         int duration = calculateTimeService.calculateTime(rollWeatherRequest.timeRoll());
